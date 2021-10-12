@@ -1,0 +1,7 @@
+@use '../../../styles/mixins';
+
+:host {
+  @include mixins.flex-center();
+  @include mixins.full-size();
+  display: flex;
+}

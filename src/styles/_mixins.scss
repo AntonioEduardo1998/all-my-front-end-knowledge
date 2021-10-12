@@ -1,0 +1,10 @@
+@mixin flex-center($type: null) {
+  align-items: center;
+  display: if($type == 'inline', inline-flex, flex);
+  justify-content: center;
+}
+
+@mixin full-size() {
+  height: 100%;
+  width: 100%;
+}

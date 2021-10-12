@@ -54,7 +54,7 @@ module.exports = {
     "rule-empty-line-before": [
       "always",
       {
-        ignore: ["first-nested"],
+        ignore: ["after-comment", "first-nested"],
       },
     ],
     "selector-class-pattern": null,
