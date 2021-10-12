@@ -1,7 +1,22 @@
 @use '../../../styles/mixins';
 
 :host {
-  @include mixins.flex-center();
   @include mixins.full-size();
-  display: flex;
+}
+
+.home {
+  @include mixins.full-size();
+  background-color: hsl(0, 0%, 0%);
+  display: grid;
+  grid-template-areas: 'left center right';
+  grid-template-columns: 1fr 2fr 1fr;
+
+  &__menu {
+    grid-area: 'left';
+    padding-top: 20px;
+  }
+
+  &__center {
+    grid-area: 'center';
+  }
 }

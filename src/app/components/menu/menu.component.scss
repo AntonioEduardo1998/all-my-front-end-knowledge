@@ -1,0 +1,44 @@
+@use '../../../styles/mixins';
+
+.menu {
+  @include mixins.full-size();
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__icon {
+    margin-right: 21px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+  }
+
+  &__row + &__row {
+    margin-top: 40px;
+  }
+
+  &__row {
+    align-items: center;
+    color: hsl(0, 0%, 85%);
+    display: flex;
+    font: 700 19px Roboto, sans-serif;
+  }
+
+  &__button {
+    background-color: hsl(205, 88%, 57%);
+    border: 1px solid transparent;
+    border-radius: 50px;
+    color: hsl(0, 0%, 85%);
+    font: 700 15px Roboto, sans-serif;
+    height: 50px;
+    width: 100%;
+  }
+
+  &__footer {
+    color: hsl(0, 0%, 85%);
+  }
+}
