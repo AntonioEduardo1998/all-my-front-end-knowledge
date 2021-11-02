@@ -1,0 +1,13 @@
+<div class="users-container">
+  <nav>
+    <ul *ngFor="let user of users | async">
+      <li class="users-container__card">
+        <div class="users-container__user-data">
+          <p>{{user.id}}</p>
+          <p>{{user.name}}</p>
+        </div>
+        <img class="users-container__right-arrow" src="../../../assets/right-arrow.png" alt="right arrow">
+      </li>
+    </ul>
+  </nav>
+</div>
