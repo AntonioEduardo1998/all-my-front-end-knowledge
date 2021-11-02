@@ -1,23 +1,38 @@
 @use "../../../styles/mixins";
 
-.users-container {
+.users {
   @include mixins.flex-center;
   @include mixins.full-size;
   background: hsl(231, 15%, 18%);
+  overflow-y: scroll;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   &__card {
     display: flex;
     justify-content: space-between;
     background-color: #f9f9f9;
     padding: 20px 40px;
-    margin-top: 40px;
+    margin: 30px 0;
     border-radius: 8px;
     box-shadow: rgba(97, 255, 202, 0.4) 5px 5px,
       rgba(97, 255, 202, 0.3) 10px 10px, rgba(97, 255, 202, 0.2) 15px 15px,
-      rgba(97, 255, 202, 0.1) 20px 20px, rgba(97, 255, 202, 0.05) 25px 25px;
+      rgba(97, 255, 202, 0.1) 20px 20px;
   }
 
   &__user-data {
     margin-right: 50px;
+  }
+
+  .link {
+    height: 30px;
+    cursor: pointer;
+    &__image {
+      height: 100%;
+    }
   }
 }
