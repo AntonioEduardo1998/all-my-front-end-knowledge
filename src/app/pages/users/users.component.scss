@@ -1,15 +1,44 @@
 @use "../../../styles/mixins";
 
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  clip-path: clip;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+
+  &__btn {
+    background: none;
+    border: 2px solid rgba(97, 255, 202, 1);
+    border-radius: 12px;
+    padding: 10px 32px;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
 .users {
   @include mixins.flex-center;
-  @include mixins.full-size;
   background: hsl(231, 15%, 18%);
-  overflow-y: scroll;
 
   &__container {
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding-top: 80px;
   }
 
   &__card {

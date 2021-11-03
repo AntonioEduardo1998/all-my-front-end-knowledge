@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-config',
   templateUrl: './user-config.component.html',
   styleUrls: ['./user-config.component.scss']
 })
-export class UserConfigComponent implements OnInit {
+export class UserConfigComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  navigateBack(): void {
+    this.router.navigate(['/']);
   }
 
 }

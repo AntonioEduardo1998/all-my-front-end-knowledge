@@ -1,0 +1,29 @@
+@use "../../../styles/mixins";
+
+.user-config {
+  @include mixins.flex-center;
+  @include mixins.full-size;
+  background: hsl(231, 15%, 18%);
+
+  &__card {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: rgba(97, 255, 202, 1) 0px 0px 0px 3px;
+    padding: 24px;
+  }
+
+  &__header {
+    height: 50px;
+    width: 100%;
+  }
+
+  .link {
+    cursor: pointer;
+    &__img {
+      height: 30px;
+    }
+  }
+}
